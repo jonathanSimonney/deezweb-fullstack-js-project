@@ -30,8 +30,7 @@ export default new Router({
     {
       path: "/search",
       name: "search",
-      component: Search,
-      props: { loggedIn: true }
+      component: Search
     },
     {
       path: "/favorites",

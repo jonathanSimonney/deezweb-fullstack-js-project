@@ -10,7 +10,7 @@
                 <label for="motdepasse">Mot de passe</label>
                 <input type="password" class="form-control" id="motdepasse" placeholder="************">
             </div>
-            <button type="submit" class="btn btn-primary">Se connecter</button>
+            <button type="submit" class="btn btn-primary" v-on:click="login">Se connecter</button>
         </form>
 
         <p class="mt-3"><router-link to="/register">Je n'ai pas de compte</router-link></p>
@@ -19,7 +19,15 @@
 
 <script>
 export default {
-  name: "Login"
+  name: "Login",
+  methods: {
+    login: function(event) {
+      //to avoid form being submitted
+      event.preventDefault();
+      this.$store.dispatch("setLoggedIn", true);
+      this.$router.push("search");
+    }
+  }
 };
 </script>
 
