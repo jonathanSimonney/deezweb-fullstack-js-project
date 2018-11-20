@@ -14,6 +14,16 @@ export default new Router({
       component: Home
     },
     {
+      path: "/login",
+      name: "login",
+      component: Home //todo give proper component to routes
+    },
+    {
+      path: "/register",
+      name: "register",
+      component: Home //todo give proper component to routes
+    },
+    {
       path: "/about",
       name: "about",
       // route level code-splitting
