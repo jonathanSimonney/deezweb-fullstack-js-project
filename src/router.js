@@ -1,12 +1,15 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
+import Login from "./views/Login.vue";
+import Register from "./views/Register.vue";
 
 Vue.use(Router);
 
 export default new Router({
   mode: "history",
   base: process.env.BASE_URL,
+  linkActiveClass: "active",
   routes: [
     {
       path: "/",
@@ -16,12 +19,12 @@ export default new Router({
     {
       path: "/login",
       name: "login",
-      component: Home //todo give proper component to routes
+      component: Login
     },
     {
       path: "/register",
       name: "register",
-      component: Home //todo give proper component to routes
+      component: Register
     },
     {
       path: "/about",
