@@ -23,7 +23,7 @@
                     <div class="dropdown-menu" aria-labelledby="userMenu">
                         <h6 class="dropdown-header">John SMITH</h6>
                         <router-link class="dropdown-item" to="/account">Mon compte</router-link>
-                        <router-link class="dropdown-item" to="/logout" v-on:click="logout">Déconnexion</router-link>
+                        <router-link class="dropdown-item" to="/logout" v-on:click.native="logout">Déconnexion</router-link>
                     </div>
                 </div>
             </div>
