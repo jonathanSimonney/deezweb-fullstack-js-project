@@ -23,21 +23,24 @@ export default {
           title: "Lose Yourself",
           artiste: "Eminem",
           album: "Curtain Call",
-          duration: 326
+          duration: 326,
+          initialFavorite: false
         },
         {
           id: 2,
           title: "Without Me",
           artiste: "Eminem",
           album: "The Eminem Show",
-          duration: 290
+          duration: 290,
+          initialFavorite: true
         },
         {
           id: 3,
           title: "The Real Slim Shady",
           artiste: "Eminem",
           album: "Curtain Call",
-          duration: 284
+          duration: 284,
+          initialFavorite: false
         }
       ]
     };
