@@ -1,6 +1,6 @@
 <template>
 	<div class="card">
-		<a href="#"><img class="card-img-top" src="//via.placeholder.com/180x100.png?text=Lose+Yourself" alt="Card image cap"></a>
+		<a href="#"><img class="card-img-top" :src="`//via.placeholder.com/180x100.png?text=${encodeURI(title)}`" alt="Card image cap"></a>
 		<div class="card-body">
 			<h5 class="card-title"><a href="#">{{title}}</a></h5>
 			<p class="card-text">{{artiste}} / {{album}}</p>
