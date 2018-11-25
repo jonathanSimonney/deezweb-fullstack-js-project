@@ -16,16 +16,9 @@ import TitleSearchForm from "../../components/TitleSearchForm";
 import TitleResults from "../../components/TitleResults";
 export default {
   name: "Search",
-    components: {TitleResults, TitleSearchForm, Welcome}
+  components: { TitleResults, TitleSearchForm, Welcome }
 };
 </script>
 
 <style scoped>
-.search-results {
-  flex-wrap: wrap;
-}
-.search-results .card {
-  min-width: 200px;
-  max-width: 300px;
-}
 </style>

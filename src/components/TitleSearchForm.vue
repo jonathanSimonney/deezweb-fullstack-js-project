@@ -23,11 +23,10 @@
 </template>
 
 <script>
-    export default {
-        name: "TitleSearchForm"
-    }
+export default {
+  name: "TitleSearchForm"
+};
 </script>
 
 <style scoped>
-
 </style>
