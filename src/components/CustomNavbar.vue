@@ -15,7 +15,7 @@
                 <router-link class="nav-item nav-link" to="/favorites"><i class="fa fa-heart"></i> Mes favoris</router-link>
                 <div class="nav-item dropleft">
                     <a class="nav-link dropdown-toggle" id="userMenu" role="button" data-toggle="dropdown">
-                        <img src="https://secure.gravatar.com/avatar/ab80b4d52a10aaea34780144949caef0" alt="JM Cléry"
+                        <img :src="`${user.avatar}`" :alt="`${user.firstname} ${user.lastname}`"
                              width="28" height="28">
                     </a>
                     <div class="dropdown-menu" aria-labelledby="userMenu">

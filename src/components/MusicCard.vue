@@ -1,9 +1,9 @@
 <template>
 	<div class="card">
-		<a href="#"><img class="card-img-top" :src="`//via.placeholder.com/180x100.png?text=${encodeURI(title)}`" alt="Card image cap"></a>
+		<a href="#"><img class="card-img-top" :src="`${album.cover}`" alt="Card image cap"></a>
 		<div class="card-body">
 			<h5 class="card-title"><a href="#">{{title}}</a></h5>
-			<p class="card-text">{{artiste}} / {{album}}</p>
+			<p class="card-text">{{artist.name}} / {{album.title}}</p>
 			<p class="card-text"><small class="text-muted">Durée : {{duration | moment("mm[m]ss")}}</small></p>
 		</div>
 		<div class="card-footer">
@@ -20,8 +20,8 @@ export default {
   props: {
     id: Number,
     title: String,
-    artiste: String,
-    album: String,
+    artist: Object,
+    album: Object,
     duration: Number,
     initialFavorite: Boolean
   },

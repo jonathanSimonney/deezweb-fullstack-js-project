@@ -15,36 +15,41 @@ import MusicCard from "./MusicCard";
 export default {
   name: "TitleResults",
   components: { MusicCard },
-  data: function() {
-    return {
-      musics: [
-        {
-          id: 1,
-          title: "Lose Yourself",
-          artiste: "Eminem",
-          album: "Curtain Call",
-          duration: 326,
-          initialFavorite: false
-        },
-        {
-          id: 2,
-          title: "Without Me",
-          artiste: "Eminem",
-          album: "The Eminem Show",
-          duration: 290,
-          initialFavorite: true
-        },
-        {
-          id: 3,
-          title: "The Real Slim Shady",
-          artiste: "Eminem",
-          album: "Curtain Call",
-          duration: 284,
-          initialFavorite: false
-        }
-      ]
-    };
+  computed: {
+    musics() {
+      return this.$store.getters.getMusics;
+    }
   }
+  // data: function() {
+  //   return {
+  //     musics: [
+  //       {
+  //         id: 1,
+  //         title: "Lose Yourself",
+  //         artiste: "Eminem",
+  //         album: "Curtain Call",
+  //         duration: 326,
+  //         initialFavorite: false
+  //       },
+  //       {
+  //         id: 2,
+  //         title: "Without Me",
+  //         artiste: "Eminem",
+  //         album: "The Eminem Show",
+  //         duration: 290,
+  //         initialFavorite: true
+  //       },
+  //       {
+  //         id: 3,
+  //         title: "The Real Slim Shady",
+  //         artiste: "Eminem",
+  //         album: "Curtain Call",
+  //         duration: 284,
+  //         initialFavorite: false
+  //       }
+  //     ]
+  //   };
+  // }
 };
 </script>
 

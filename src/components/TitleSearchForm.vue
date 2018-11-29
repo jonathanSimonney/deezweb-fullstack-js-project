@@ -37,8 +37,7 @@ export default {
     updateArticleList: function(event) {
       //to avoid form being submitted
       event.preventDefault();
-      console.log(this.search);
-      //update the global state.
+      this.$store.dispatch("setMusics", this.search);
     }
   }
 };
