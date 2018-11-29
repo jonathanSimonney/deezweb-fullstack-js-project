@@ -3,11 +3,11 @@
 		<div class="row">
 			<label for="searchText" class="col-sm-2 col-form-label text-right">Recherche&nbsp;:</label>
 			<div class="col-sm-4">
-				<input type="text" class="form-control" id="searchText" placeholder="Eminem, Armin Van Buuren, Rihanna, ...">
+				<input v-model="search.searchText" type="text" class="form-control" id="searchText" placeholder="Eminem, Armin Van Buuren, Rihanna, ...">
 			</div>
 			<label for="searchText" class="col-sm-2 col-form-label text-right">Trier par :</label>
 			<div class="col-sm-2">
-				<select id="order" class="custom-select">
+				<select id="order" class="custom-select" v-model="search.searchCriteria">
 					<option>Album</option>
 					<option>Artiste</option>
 					<option>Musique</option>
@@ -16,7 +16,7 @@
 				</select>
 			</div>
 			<div class="col-sm-2 text-right">
-				<input type="submit" class="btn btn-primary" value="Go">
+				<input type="submit" class="btn btn-primary" value="Go" v-on:click="updateArticleList">
 			</div>
 		</div>
 	</form>
@@ -24,7 +24,23 @@
 
 <script>
 export default {
-  name: "TitleSearchForm"
+  name: "TitleSearchForm",
+  data: function() {
+    return {
+      search: {
+        searchText: "",
+        searchCriteria: ""
+      }
+    };
+  },
+  methods: {
+    updateArticleList: function(event) {
+      //to avoid form being submitted
+      event.preventDefault();
+      console.log(this.search);
+      //update the global state.
+    }
+  }
 };
 </script>
 

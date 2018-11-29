@@ -18,14 +18,18 @@
 </template>
 
 <script>
+import fakeUser from "../fakeUser";
+
 export default {
   name: "Login",
   methods: {
     login: function(event) {
       //to avoid form being submitted
       event.preventDefault();
-      this.$store.dispatch("setLoggedIn", true);
-      this.$router.push("search");
+      fakeUser.getUser().then(user => {
+        this.$store.dispatch("setUser", user);
+        this.$router.push("search");
+      });
     }
   }
 };

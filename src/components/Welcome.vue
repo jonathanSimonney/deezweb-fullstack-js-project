@@ -1,13 +1,18 @@
 <template>
 	<div>
-		<h1>Bienvenue John SMITH</h1>
+		<h1>Bienvenue {{user.firstname}} {{user.lastname}}</h1>
 		<p>Recherchez un titre sur Deezer en utilisant le formulaire suivant :</p>
 	</div>
 </template>
 
 <script>
 export default {
-  name: "Welcome"
+  name: "Welcome",
+  computed: {
+    user() {
+      return this.$store.getters.getUser;
+    }
+  }
 };
 </script>
 
