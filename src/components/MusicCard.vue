@@ -1,8 +1,8 @@
 <template>
 	<div class="card">
-		<a href="#"><img class="card-img-top" :src="`${album.cover}`" alt="Card image cap"></a>
+		<router-link :to="{ name: 'track', params: { id: id } }"><img class="card-img-top" :src="`${album.cover}`" alt="Card image cap"></router-link>
 		<div class="card-body">
-			<h5 class="card-title"><a href="#">{{title}}</a></h5>
+			<h5 class="card-title"><router-link :to="{ name: 'track', params: { id: id } }">{{title}}</router-link></h5>
 			<p class="card-text">{{artist.name}} / {{album.title}}</p>
 			<p class="card-text"><small class="text-muted">Durée : {{duration | moment("mm[m]ss")}}</small></p>
 		</div>
