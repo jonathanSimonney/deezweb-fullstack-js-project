@@ -7,8 +7,8 @@
 			<p class="card-text"><small class="text-muted">Durée : {{duration | moment("mm[m]ss")}}</small></p>
 		</div>
 		<div class="card-footer">
-			<a href="#" class="btn btn-secondary btn-sm"><i class="fa fa-cc-discover"></i> Album</a>
-			<a href="#" class="btn btn-secondary btn-sm"><i class="fa fa-user"></i> Artiste</a>
+			<router-link :to="{ name: 'album', params: { id: track.album.id } }" class="btn btn-secondary btn-sm"><i class="fa fa-cc-discover"></i> Album</router-link>
+			<router-link :to="{ name: 'artist', params: { id: track.artist.id } }" class="btn btn-secondary btn-sm"><i class="fa fa-user"></i> Artiste</router-link>
 			<a href="#" v-bind:class="heartClass" v-on:click="switchFavorite"><i class="fa fa-heart-o"></i></a>
 		</div>
 	</div>

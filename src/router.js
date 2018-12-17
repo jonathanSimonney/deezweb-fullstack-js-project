@@ -5,6 +5,8 @@ import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import Search from "./views/connected/Search.vue";
 import Track from "./views/connected/Track.vue";
+import Album from "./views/connected/Album.vue";
+import Artist from "./views/connected/Artist.vue";
 
 Vue.use(Router);
 
@@ -37,6 +39,16 @@ export default new Router({
       path: "/track/:id",
       name: "track",
       component: Track
+    },
+    {
+      path: "/album/:id",
+      name: "album",
+      component: Album
+    },
+    {
+      path: "/artist/:id",
+      name: "artist",
+      component: Artist
     },
     {
       path: "/favorites",
