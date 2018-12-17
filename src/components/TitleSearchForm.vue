@@ -25,13 +25,10 @@
 <script>
 export default {
   name: "TitleSearchForm",
-  data: function() {
-    return {
-      search: {
-        searchText: "",
-        searchCriteria: ""
-      }
-    };
+  computed: {
+    search() {
+      return this.$store.getters.getSearchParams;
+    }
   },
   methods: {
     updateArticleList: function(event) {

@@ -7,11 +7,13 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     loggedUser: false,
-    listMusics: []
+    listMusics: [],
+    searchParams: {}
   },
   getters: {
     getUser: state => state.loggedUser,
-    getMusics: state => state.listMusics
+    getMusics: state => state.listMusics,
+    getSearchParams: state => state.searchParams
   },
   actions: {
     setUser({ commit }, user) {
@@ -54,6 +56,7 @@ export default new Vuex.Store({
         .then(function(response) {
           console.log(response.data);
           commit("changeMusics", { listMusics: response.data });
+          commit("changeSearchParams", { searchParams: search });
         })
         .catch(function(error) {
           console.log(error);
@@ -63,6 +66,9 @@ export default new Vuex.Store({
   mutations: {
     changeUser(state, updatedState) {
       state.loggedUser = updatedState.loggedUser;
+    },
+    changeSearchParams(state, updatedState) {
+      state.searchParams = updatedState.searchParams;
     },
     changeMusics(state, updatedState) {
       state.listMusics = updatedState.listMusics;
